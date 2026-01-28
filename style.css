@@ -184,7 +184,7 @@ tr:hover { background: #252525; }
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: var(--primary);
+    background: var( #252525);
     color: white;
     padding: 15px;
     border-radius: 10px;
@@ -193,11 +193,20 @@ tr:hover { background: #252525; }
 }
 
 footer {
-    background: black;
+    background: #ff4500;
     padding: 60px 0;
     text-align: center;
-    border-top: 3px solid var(--primary);
+    border-top: 3px solid #cc3700; 
 }
 
-.copyright { color: var(--gray); font-size: 1.2rem; margin-bottom: 20px;}
-pre { color: var(--primary); font-size: 14px; font-weight: bold; }
+
+.copyright {
+    color: #1a1a1a;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #fff;
+}
+
+
+pre { color: var(--pri#fff); font-size: 14px; font-weight: bold; }
