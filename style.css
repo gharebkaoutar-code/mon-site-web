@@ -1,0 +1,203 @@
+:root {
+    --primary: #ff4500;
+    --accent: #ffd700;
+    --dark: #0f0f0f;
+    --card: #1c1c1c;
+    --gray: #b0b0b0;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--dark);
+    color: white;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* --- HEADER DYNAMIQUE --- */
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), 
+                url('https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?auto=format&fit=crop&w=1200');
+    background-size: cover;
+    background-attachment: fixed; /* Effet Parallax */
+    text-align: center;
+    position: relative;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+    box-shadow: 0 0 20px var(--primary);
+    margin-bottom: 20px;
+}
+
+.glow-text {
+    font-size: 5rem;
+    margin: 0;
+    letter-spacing: 5px;
+    color: white;
+    text-shadow:
+        0 0 5px rgba(255,255,255,0.8),
+        0 0 10px rgba(255,0,0,0.8),
+        0 0 20px rgba(255,0,0,0.6);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.qr-code {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background: white;
+    padding: 8px;
+    border-radius: 5px;
+    color: black;
+    font-size: 0.7rem;
+}
+.qr-code img { width: 60px; }
+
+/* --- NAVIGATION --- */
+nav {
+    background: rgba(0,0,0,0.95);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--primary);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover { color: var(--primary); }
+
+/* --- SECTIONS --- */
+.intro-section {
+    padding: 100px 20px;
+    text-align: center;
+    background: radial-gradient(circle, #222 0%, #0f0f0f 100%);
+}
+
+.content-wrapper { max-width: 800px; margin: auto; }
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3rem;
+    padding: 50px 0;
+    color: var(--primary);
+    text-shadow: 2px 2px #000;
+}
+
+/* --- GRILLE & CARTES --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 50px 50px;
+}
+
+.card {
+    background: var(--card);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.4s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px var(--primary);
+}
+
+.category {
+    color: var(--accent);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.card img { width: 100%; height: 250px; object-fit: cover; }
+.card-content { padding: 25px; }
+
+/* --- TABLEAU --- */
+table {
+    width: 90%;
+    margin: 0 auto 100px;
+    border-collapse: collapse;
+    background: var(--card);
+}
+
+th, td { padding: 20px; text-align: left; border-bottom: 1px solid #333; }
+th { background: var(--primary); color: white; }
+tr:hover { background: #252525; }
+
+/* --- FOOTER & BOUTONS --- */
+.contact-bar { text-align: center; padding: 50px; }
+
+.btn-mail {
+    background: var(--primary);
+    color: white;
+    padding: 20px 50px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-mail:hover { background: white; color: var(--primary); }
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background: black;
+    padding: 60px 0;
+    text-align: center;
+    border-top: 3px solid var(--primary);
+}
+
+.copyright { color: var(--gray); font-size: 1.2rem; margin-bottom: 20px;}
+pre { color: var(--primary); font-size: 14px; font-weight: bold; }
