@@ -184,14 +184,13 @@ tr:hover { background: #252525; }
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: var( #252525);
+    background:  #252525;
     color: white;
     padding: 15px;
     border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
 }
-
 footer {
     background: #ff4500;
     padding: 60px 0;
@@ -210,3 +209,4 @@ footer {
 
 
 pre { color: var(--pri#fff); font-size: 14px; font-weight: bold; }
+
